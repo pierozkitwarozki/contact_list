@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ContactList2.Droid</string>
+    <string name="action_settings">Settings</string>
+    <string name="add_btn_text">Add contact</string>
+</resources>
