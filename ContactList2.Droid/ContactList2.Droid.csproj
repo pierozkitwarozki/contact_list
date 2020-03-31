@@ -64,7 +64,6 @@
     <Compile Include="Activities\AddActivity.cs" />
     <Compile Include="Adapters\ContactListAdapter.cs" />
     <Compile Include="Activities\MainActivity.cs" />
-    <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\ContactViewHolder.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -166,6 +165,12 @@
     <AndroidResource Include="Resources\layout\add_contact.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ContactList2.BLL\ContactList2.BLL.csproj">
+      <Project>{ad3801e5-460a-4d91-b19c-8da2bfb28eca}</Project>
+      <Name>ContactList2.BLL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactList2.Droid", "ContactList2.Droid\ContactList2.Droid.csproj", "{4EE5578F-B875-404E-9035-32BE57E45753}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactList2.BLL", "ContactList2.BLL\ContactList2.BLL.csproj", "{AD3801E5-460A-4D91-B19C-8DA2BFB28ECA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{4EE5578F-B875-404E-9035-32BE57E45753}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EE5578F-B875-404E-9035-32BE57E45753}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4EE5578F-B875-404E-9035-32BE57E45753}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AD3801E5-460A-4D91-B19C-8DA2BFB28ECA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD3801E5-460A-4D91-B19C-8DA2BFB28ECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD3801E5-460A-4D91-B19C-8DA2BFB28ECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD3801E5-460A-4D91-B19C-8DA2BFB28ECA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -13,18 +13,18 @@ using ContactList2.Droid.Models;
 
 namespace ContactList2.Droid.Adapters
 {
-    class ContactListAdapter : BaseAdapter<Contact>
+    class ContactListAdapter : BaseAdapter<ContactList2.Models.Contact>
     {
-        private List<Models.Contact> contactList;
+        private List<ContactList2.Models.Contact> contactList;
         private Activity parent;
 
-        public ContactListAdapter(List<Models.Contact> contacts, Activity parent)
+        public ContactListAdapter(List<ContactList2.Models.Contact> contacts, Activity parent)
         {
             this.contactList = contacts;
             this.parent = parent;
         }
 
-        public override Contact this[int position] {
+        public override ContactList2.Models.Contact this[int position] {
 
             get
             {

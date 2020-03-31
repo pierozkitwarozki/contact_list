@@ -26,7 +26,7 @@ namespace ContactList2.Droid.Activities
             var phoneNumberEditText = FindViewById<EditText>(Resource.Id.phoneNumberEditText);
             addButton.Click += delegate
             {
-                var newContact = new Models.Contact(nameEditText.Text, emailEditText.Text, phoneNumberEditText.Text);
+                var newContact = new ContactList2.Models.Contact(nameEditText.Text, emailEditText.Text, phoneNumberEditText.Text);
                 var intent = new Intent();
                 intent.PutExtra(MainActivity.NEW_CONTACT_KEY, 
                     JsonConvert.SerializeObject(newContact));

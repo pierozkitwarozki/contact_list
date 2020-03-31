@@ -15,7 +15,7 @@ namespace ContactList2.Droid
         private static int ADD_CONTACT_REQUEST_CODE = 200;
         private Adapters.ContactListAdapter adapter;
 
-        private List<Models.Contact> contacts = new List<Models.Contact>();
+        private List<ContactList2.Models.Contact> contacts = new List<ContactList2.Models.Contact>();
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -28,7 +28,7 @@ namespace ContactList2.Droid
             {
                 StartActivityForResult(typeof(Activities.AddActivity), ADD_CONTACT_REQUEST_CODE);
             };
-            Initialize();
+            contacts = ContactList2.BLL.ContactListDataSource.GetContacts();
             ListView contactListView = FindViewById<ListView>(Resource.Id.contactListView);
             adapter = new Adapters.ContactListAdapter(contacts, this);
             contactListView.Adapter = adapter;
@@ -36,15 +36,7 @@ namespace ContactList2.Droid
             
         }
 
-        private void Initialize()
-        {
-            for (int i = 0; i < 20; i++)
-            {
-                contacts.Add(new Models.Contact(string.Format("My Contact {0}", i + 1),
-                                         "fake_email@gmail.com",
-                                         "+48 123 123 123"));
-            }
-        }
+        
 
         protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Android.Content.Intent data)
         {
@@ -52,7 +44,7 @@ namespace ContactList2.Droid
             if (requestCode == ADD_CONTACT_REQUEST_CODE && data != null)
             {
                 var newContact =
-                    JsonConvert.DeserializeObject<Models.Contact>(data.GetStringExtra(NEW_CONTACT_KEY));
+                    JsonConvert.DeserializeObject<ContactList2.Models.Contact>(data.GetStringExtra(NEW_CONTACT_KEY));
                 contacts.Add(newContact);
                 adapter.NotifyDataSetChanged();
             }
